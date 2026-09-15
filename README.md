@@ -8,7 +8,7 @@ A 1970s-themed interactive courtroom web app where users stand trial for their q
 
 The app integrates with the public **Apple iTunes Search API** for real-time track searches, retrieving album artwork, release years, genre tags, and 30-second audio previews. Users seize 1 to 5 tracks into the "Court Evidence Docket" (Exhibits A through E), which loads onto a vintage 1970s cassette recorder equipped with rotating tape reels, a mechanical counter, and an analog VU meter driven in real time by Web Audio frequency analysis.
 
-During the interactive trial sequence, a procedural roast engine classifies track metadata and orchestrates a back-and-forth courtroom dialogue. Gavel strikes trigger sub-bass acoustic pulses and screen-shake animations, while White Russian ice clinks and typewriter speech balloons deliver custom roasts — featuring special easter egg handling for Creedence Clearwater Revival (acquittal), The Eagles (extreme outrage), Pop/Viral Hits (conformism charges), and 808 Trap (sub-bass noise violations). Upon completion, a native **HTML5 Canvas generator** outputs a downloadable 1970s Los Angeles County Municipal Citation printed on aged carbon paper with distressed rubber stamps (_"THE DUDE ABIDES"_ or _"OVER THE LINE - MARK IT ZERO"_).
+During the interactive trial sequence, a procedural roast engine classifies track metadata and orchestrates a back-and-forth courtroom dialogue. Gavel strikes trigger sub-bass acoustic pulses and screen-shake animations, while White Russian ice clinks and typewriter speech balloons deliver custom roasts : featuring special easter egg handling for Creedence Clearwater Revival (acquittal), The Eagles (extreme outrage), Pop/Viral Hits (conformism charges), and 808 Trap (sub-bass noise violations). Upon completion, a native **HTML5 Canvas generator** outputs a downloadable 1970s Los Angeles County Municipal Citation printed on aged carbon paper with distressed rubber stamps (_"THE DUDE ABIDES"_ or _"OVER THE LINE - MARK IT ZERO"_).
 
 ## Screenshots
 
@@ -22,7 +22,7 @@ During the interactive trial sequence, a procedural roast engine classifies trac
 
 Before running The Dude Court: Auxiliary Offenses, ensure you have the following installed:
 
-- Python 3.x (for the local dev server) — or any static file server
+- Python 3.x (for the local dev server) : or any static file server
 - A modern web browser with HTML5 Canvas, SVG, and Web Audio API support (Chrome, Firefox, Edge, or Safari)
 - Windows 10/11, macOS, or Linux operating system
 
