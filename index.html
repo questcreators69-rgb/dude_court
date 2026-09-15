@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dude Court: Auxiliary Offenses — Retro Music Roaster</title>
+  <meta name="description" content="Facing charges for questionable music taste? The Honorable Judge presides while The Dude roasts your songs from the witness stand in this 1970s courtroom experience.">
+  
+  <!-- Retro & Vintage Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Special+Elite&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons (shadcn/ui default icon library) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="crt-enabled film-grain-enabled">
+
+  <!-- Atmospheric Vintage Overlays -->
+  <div class="crt-overlay" id="crtOverlay"></div>
+  <div class="film-grain" id="filmGrain"></div>
+
+  <!-- Header Banner -->
+  <header class="court-header">
+    <div class="header-seal-container">
+      <div class="header-seal">
+        <span class="seal-star"><i data-lucide="scale"></i></span>
+        <span class="seal-text">MUNICIPAL COURT</span>
+        <span class="seal-sub">DIV. 8 - AUDIO AFFAIRS</span>
+      </div>
+      <div class="header-titles">
+        <h1 class="main-title">THE DUDE COURT</h1>
+        <h2 class="sub-title">AUXILIARY OFFENSES & MUSICAL CONTEMPT</h2>
+      </div>
+    </div>
+
+    <!-- Controls Toolbar -->
+    <div class="toolbar-controls">
+      <button class="tool-btn" id="btnToggleSound" title="Toggle Sound SFX">
+        <span class="icon" id="soundIcon"><i data-lucide="volume-2"></i></span>
+        <span class="label">AUDIO ON</span>
+      </button>
+      <button class="tool-btn" id="btnToggleCRT" title="Toggle 1970s CRT Effect">
+        <span class="icon"><i data-lucide="tv"></i></span>
+        <span class="label">CRT SCAN</span>
+      </button>
+      <button class="tool-btn" id="btnToggleGrain" title="Toggle 35mm Film Grain">
+        <span class="icon"><i data-lucide="film"></i></span>
+        <span class="label">35MM GRAIN</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-stage-wrapper">
+    <!-- SECTION 1: THE COURTROOM STAGE -->
+    <section class="courtroom-stage" id="courtroomStage">
+      <div class="stage-ambient-light"></div>
+      
+      <!-- Top Center: The High Bench & The Judge -->
+      <div class="bench-zone judge-zone">
+        <div class="banker-lamp" id="bankerLamp" title="Click to toggle lamp glow">
+          <div class="lamp-shade"></div>
+          <div class="lamp-glow"></div>
+          <div class="lamp-pull"></div>
+        </div>
+
+        <div class="character-card judge-card" id="judgeCharacter">
+          <div class="character-avatar judge-avatar">
+            <!-- Atmospheric Stylized Canvas & CSS Silhouette of The Judge -->
+            <div class="judge-robe"></div>
+            <div class="judge-head">
+              <div class="judge-hair"></div>
+              <div class="judge-glasses"></div>
+              <div class="judge-eyebrows" id="judgeEyebrows"></div>
+              <div class="judge-mouth" id="judgeMouth"></div>
+            </div>
+            <div class="judge-gavel-arm" id="judgeGavelArm">
+              <div class="gavel-wood"></div>
+            </div>
+          </div>
+          <div class="character-badge">
+            <span class="title">THE HONORABLE</span>
+            <span class="name">JUDGE STERN</span>
+          </div>
+        </div>
+
+        <div class="bench-plaque">"JUSTICE IS DEAF, BUT NOT TO BAD GROOVES"</div>
+      </div>
+
+      <!-- Center Speech Bubble Container -->
+      <div class="dialogue-container" id="dialogueContainer">
+        <div class="speech-bubble hidden" id="speechBubble">
+          <div class="bubble-header">
+            <span class="speaker-name" id="speakerName">JUDGE STERN</span>
+            <span class="speaker-role" id="speakerRole">PRESIDING MAGISTRATE</span>
+          </div>
+          <div class="bubble-text" id="bubbleText">
+            "Court is now in session. Enter your music evidence into the docket below to face trial."
+          </div>
+          <div class="bubble-tail"></div>
+        </div>
+      </div>
+
+      <!-- Right Witness Box: The Dude -->
+      <div class="witness-zone dude-zone">
+        <div class="character-card dude-card" id="dudeCharacter">
+          <div class="character-avatar dude-avatar">
+            <!-- Atmospheric Stylized Silhouette & Vector details of The Dude -->
+            <div class="dude-bathrobe"></div>
+            <div class="dude-cardigan-pattern"></div>
+            <div class="dude-head">
+              <div class="dude-hair-long"></div>
+              <div class="dude-beard"></div>
+              <div class="dude-sunglasses"></div>
+            </div>
+            <div class="white-russian-glass" id="whiteRussianGlass" title="The Dude's White Russian">
+              <div class="glass-rim"></div>
+              <div class="cream-liquid"></div>
+              <div class="ice-cubes">
+                <span class="cube cube-1"></span>
+                <span class="cube cube-2"></span>
+              </div>
+              <div class="straw"></div>
+            </div>
+          </div>
+          <div class="character-badge dude-badge">
+            <span class="title">CHIEF WITNESS</span>
+            <span class="name">THE DUDE</span>
+          </div>
+        </div>
+        <div class="witness-plaque">"THE DUDE ABIDES"</div>
+      </div>
+
+      <!-- Background Courtroom Elements -->
+      <div class="courtroom-bg-wood"></div>
+      <div class="courtroom-flags">
+        <div class="flag flag-ca" title="State of California"></div>
+        <div class="flag flag-dude" title="Lebowski Bowling League"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE DEFENSE TABLE & DOCKET INTERFACE -->
+    <section class="defense-docket-section">
+      <div class="section-title-bar">
+        <h3>EVIDENCE DOCKET & TAPE DECK</h3>
+        <span class="docket-count" id="docketCount">0 / 5 SONGS SEIZED</span>
+      </div>
+
+      <div class="defense-grid">
+        <!-- Left: Search Warrant & Song Docket -->
+        <div class="search-docket-panel">
+          <div class="search-warrant-box">
+            <label for="searchInput" class="warrant-label">
+              <span class="stamp-mini">SUBPOENA</span> SEARCH MUSIC DATABASE:
+            </label>
+            <div class="search-input-wrapper">
+              <input type="text" id="searchInput" placeholder="Type artist, song title, or album (e.g., Creedence, Eagles, Taylor Swift)..." autocomplete="off">
+              <button class="search-clear-btn" id="btnClearSearch" title="Clear search"><i data-lucide="x"></i></button>
+            </div>
+
+            <!-- Search Results Dropdown -->
+            <div class="search-results-dropdown hidden" id="searchResults">
+              <div class="results-loading hidden" id="resultsLoading">Searching iTunes Database...</div>
+              <div class="results-list" id="resultsList"></div>
+            </div>
+          </div>
+
+          <!-- Active Songs Docket Slots -->
+          <div class="docket-slots-container" id="docketSlots">
+            <div class="empty-docket-msg" id="emptyDocketMsg">
+              <div class="msg-icon"><i data-lucide="disc-3"></i></div>
+              <p>NO EVIDENCE SUBMITTED YET</p>
+              <span>Search for 1 to 5 tracks above to build your case, man.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 1970s Vintage Cassette Recorder -->
+        <div class="cassette-deck-panel">
+          <div class="deck-frame">
+            <div class="deck-brand">
+              <span class="brand-name">RETRO-AUDIO</span>
+              <span class="model-no">MODEL TS-1977</span>
+            </div>
+
+            <!-- Cassette Window with Tape Reels -->
+            <div class="cassette-housing">
+              <div class="tape-cassette" id="tapeCassette">
+                <div class="spool spool-left" id="spoolLeft">
+                  <div class="spool-teeth"></div>
+                </div>
+                <div class="tape-bridge">
+                  <div class="magnetic-tape"></div>
+                </div>
+                <div class="spool spool-right" id="spoolRight">
+                  <div class="spool-teeth"></div>
+                </div>
+                <div class="tape-label-text" id="tapeLabelText">EXHIBIT A: NO TAPE</div>
+              </div>
+            </div>
+
+            <!-- Analog VU Meter -->
+            <div class="vu-meter-box">
+              <div class="vu-meter-label">ANALOG OUTPUT LEVEL</div>
+              <div class="vu-meter-dial">
+                <div class="vu-scale">
+                  <span>-20</span><span>-10</span><span>-5</span><span>0</span><span class="red-zone">+3</span>
+                </div>
+                <div class="vu-needle" id="vuNeedle"></div>
+              </div>
+            </div>
+
+            <!-- Mechanical Tape Counter -->
+            <div class="tape-counter">
+              <span class="digit" id="counter1">0</span>
+              <span class="digit" id="counter2">0</span>
+              <span class="digit" id="counter3">0</span>
+            </div>
+
+            <!-- Mechanical Transport Buttons -->
+            <div class="deck-controls">
+              <button class="deck-btn btn-play" id="btnDeckPlay" title="Play 30s Preview">
+                <span class="btn-cap"><i data-lucide="play"></i> PLAY</span>
+              </button>
+              <button class="deck-btn btn-pause" id="btnDeckPause" title="Pause Preview">
+                <span class="btn-cap"><i data-lucide="pause"></i> PAUSE</span>
+              </button>
+              <button class="deck-btn btn-stop" id="btnDeckStop" title="Stop Preview">
+                <span class="btn-cap"><i data-lucide="square"></i> STOP</span>
+              </button>
+            </div>
+            
+            <div class="deck-status-display" id="deckStatus">STATUS: IDLE</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trial Action Bar -->
+      <div class="trial-action-bar">
+        <button class="btn-commence-trial" id="btnCommenceTrial" disabled>
+          <span class="gavel-icon"><i data-lucide="gavel"></i></span>
+          <span class="btn-text">PRESENT EVIDENCE & COMMENCE TRIAL</span>
+        </button>
+        <button class="btn-reset-docket" id="btnResetDocket">
+          RESET DOCKET
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 3: CITATION & SUBPOENA EXPORT MODAL -->
+  <div class="modal-backdrop hidden" id="citationModal">
+    <div class="modal-card citation-modal-card">
+      <div class="modal-header">
+        <h2>OFFICIAL MUNICIPAL CITATION ISSUED</h2>
+        <button class="modal-close-btn" id="btnCloseModal"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="canvas-preview-wrapper">
+          <!-- The High-Res Rendered Subpoena Canvas -->
+          <canvas id="subpoenaCanvas" width="1200" height="1600"></canvas>
+        </div>
+
+        <div class="citation-actions-panel">
+          <div class="defendant-name-field">
+            <label for="defendantAlias">DEFENDANT NAME / ALIAS:</label>
+            <input type="text" id="defendantAlias" value="The Music Offender" maxlength="32">
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn-export-png" id="btnDownloadCitation">
+              <i data-lucide="download"></i> DOWNLOAD CITATION (.PNG)
+            </button>
+            <button class="btn-copy-summary" id="btnCopySummary">
+              <i data-lucide="copy"></i> COPY LEGAL SUMMARY
+            </button>
+          </div>
+          <div class="copy-feedback hidden" id="copyFeedback">Legal summary copied to clipboard!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="app-footer">
+    <p>The Dude Court: Auxiliary Offenses &copy; 2026. Inspired by <em>The Big Lebowski</em>. Powered by Apple iTunes API & Web Audio API. Audio previews & artwork provided courtesy of iTunes.</p>
+  </footer>
+
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
